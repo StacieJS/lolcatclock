@@ -19,7 +19,7 @@ var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.
 var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
 var wakeUpTimeSelector =  document.getElementById("wakeUpTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
-var wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
+var napTimeSelector = document.getElementById("napTimeSelector");
 
 			   
 										   
