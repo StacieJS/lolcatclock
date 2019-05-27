@@ -143,17 +143,14 @@ var partyEvent = function() {
  
 };
 
-
+var wakeUpEvent = function() {
+    wakeupTime = wakeUpTimeSelector.value;
+};
 
 var lunchEvent = function() {
     lunchTime = lunchTimeSelector.value;
 };
 
-
-var wakeUpEvent = function() {
-    wakeupTime = wakeUpTimeSelector.value;
-};
- 
 var napEvent = function() {
     napTime = napTimeSelector.value;
 };
