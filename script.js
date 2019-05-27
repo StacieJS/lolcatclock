@@ -143,11 +143,8 @@ var partyEvent = function() {
  
 };
 
-partyTimeButton.addEventListener('click', partyEvent);
 
 
-
-//ADDED BELOW `var partyEvent` function
 var lunchEvent = function() {
     lunchTime = lunchTimeSelector.value;
 };
