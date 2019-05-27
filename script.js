@@ -17,6 +17,7 @@ var image = "https://i.pinimg.com/originals/89/9e/71/899e7132fd5125067051104e5e3
 var image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.jpg";   
 var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg";
 var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
+var partyTimeButton = document.getElementById("partyTimeButton");
 var wakeUpTimeSelector =  document.getElementById("wakeUpTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
@@ -162,7 +163,7 @@ var napEvent = function() {
 
 
 
-//ADDED BELOW `partyTimeButton` event listener
+partyTimeButton.addEventListener('click', partyEvent);
 napTimeSelector.addEventListener('change', napEvent);
 lunchTimeSelector.addEventListener('change', lunchEvent);
 wakeUpTimeSelector.addEventListener('change', wakeUpEvent);
