@@ -18,7 +18,7 @@ var image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.
 var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg";
 var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
 var partyTimeButton = document.getElementById("partyTimeButton");
-var wakeupTimeSelector =  document.getElementById("wakeupTimeSelector");
+var wakeupTimeSelector =  document.getElementById("wakeUpTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
 
@@ -98,7 +98,7 @@ var evening = 18; // 6PM
 var wakeupTime = 9; // 9AM
 var lunchTime = 12; // 12PM
 var partyTime = 17; // 5PM
-var napTime = lunchTime + 2; // 2PM
+var napTime = lunchtime + 2; // 2PM
 var time = new Date().getHours();
 
 var updateClock = function ()
@@ -166,7 +166,7 @@ var partyEvent = function() {
  
 };
 
-var wakeupEvent = function() {
+var wakeUpEvent = function() {
     wakeupTime = wakeupTimeSelector.value;
 };
 
@@ -183,4 +183,4 @@ var napEvent = function() {
 partyTimeButton.addEventListener('click', partyEvent);
 napTimeSelector.addEventListener('change', napEvent);
 lunchTimeSelector.addEventListener('change', lunchEvent);
-wakeupTimeSelector.addEventListener('change', wakeupEvent);
+wakeupTimeSelector.addEventListener('change', wakeUpEvent);
