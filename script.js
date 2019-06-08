@@ -18,6 +18,7 @@ var image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.
 var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg";
 var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
 var partyTimeButton = document.getElementById("partyTimeButton");
+var isPartyTime = false;
 var wakeupTimeSelector =  document.getElementById("wakeupTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
@@ -137,33 +138,21 @@ var oneSecond = 1000;
 	
 setInterval( updateClock, oneSecond);
 
+}
 
-
-
-// set isPartyTime to false
-var isPartyTime = false;
- 
 var partyEvent = function() {
-   
-   //check isPartyTime
-   if (isPartyTime === false){ 
-        // if isPartyTime is false, change it to true 
-        //so we know the button has been clicked
-        isPartyTime = true; 
-        // set time to partyTime so the lolCat clock 
-        //image and message update to the partyTime image and message
-        time = partyTime; 
-        partyTimeButton.innerText = "PARTY TIME!";
-        partyTimeButton.style.backgroundColor = "#222";
-    } else { 
-        // if isPartyTime is true, change it to false to end the party
-        isPartyTime = false; 
-        // set time back to the current time
-        time = new Date().getHours(); 
-        partyTimeButton.innerText = "PARTY OVER";
-        partyTimeButton.style.backgroundColor = "#0A8DAB";
-    }
  
+   if (isPartyTime === false) {
+      isPartyTime = true;
+      time = partyTime;
+      partyTimeButton.innerText = "PARTY TIME!";
+      partyTimeButton.style.backgroundColor = "#222";
+   } else {
+      isPartyTime = false;
+      time = new Date().getHours();
+      partyTimeButton.innerText = "PARTY OVER";
+      partyTimeButton.style.backgroundColor = "#0A8DAB";
+   }
 };
 
 var wakeupEvent = function() {
