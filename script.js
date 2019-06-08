@@ -138,7 +138,7 @@ var oneSecond = 1000;
 	
 setInterval( updateClock, oneSecond);
 
-}
+
 
 var partyEvent = function() {
  
