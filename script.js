@@ -18,7 +18,7 @@ var image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.
 var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg";
 var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
 var partyTimeButton = document.getElementById("partyTimeButton");
-var wakeUpTimeSelector =  document.getElementById("wakeUpTimeSelector");
+var wakeupTimeSelector =  document.getElementById("wakeUpTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
 
@@ -95,10 +95,10 @@ var showCurrentTime = function()
 var noon = 12;
 var evening = 18; // 6PM
  
-var wakeuptime = 9; // 9AM
-var lunchtime = 12; // 12PM
-var partytime = 17; // 5PM
-var naptime = lunchtime + 2; // 2PM
+var wakeupTime = 9; // 9AM
+var lunchTime = 12; // 12PM
+var partyTime = 17; // 5PM
+var napTime = lunchtime + 2; // 2PM
 var time = new Date().getHours();
 
 var updateClock = function ()
@@ -124,7 +124,7 @@ var updateClock = function ()
    	 messageText = "Good Evening!";
 	} else {
 	image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg"; 
-    	messageText = "Good afternoon!";
+    	messageText = "Good Afternoon!";
 }
 	
 showCurrentTime();
@@ -167,7 +167,7 @@ var partyEvent = function() {
 };
 
 var wakeUpEvent = function() {
-    wakeupTime = wakeUpTimeSelector.value;
+    wakeupTime = wakeupTimeSelector.value;
 };
 
 var lunchEvent = function() {
@@ -183,4 +183,4 @@ var napEvent = function() {
 partyTimeButton.addEventListener('click', partyEvent);
 napTimeSelector.addEventListener('change', napEvent);
 lunchTimeSelector.addEventListener('change', lunchEvent);
-wakeUpTimeSelector.addEventListener('change', wakeUpEvent);
+wakeupTimeSelector.addEventListener('change', wakeUpEvent);
