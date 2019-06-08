@@ -138,8 +138,11 @@ var oneSecond = 1000;
 	
 setInterval( updateClock, oneSecond);
 
+}
 
-
+var partyTimeButton = document.getElementById("partyTimeButton");
+var isPartyTime = false;
+ 
 var partyEvent = function() {
  
    if (isPartyTime === false) {
@@ -154,6 +157,9 @@ var partyEvent = function() {
       partyTimeButton.style.backgroundColor = "#0A8DAB";
    }
 };
+ 
+partyTimeButton.addEventListener('click', partyEvent);
+
 
 var wakeupEvent = function() {
     wakeupTime = wakeupTimeSelector.value;
