@@ -98,7 +98,7 @@ var evening = 18; // 6PM
 var wakeupTime = 9; // 9AM
 var lunchTime = 12; // 12PM
 var partyTime = 17; // 5PM
-var napTime = lunchtime + 2; // 2PM
+var napTime = lunchTime + 2; // 2PM
 var time = new Date().getHours();
 
 var updateClock = function ()
@@ -166,7 +166,7 @@ var partyEvent = function() {
  
 };
 
-var wakeUpEvent = function() {
+var wakeupEvent = function() {
     wakeupTime = wakeupTimeSelector.value;
 };
 
@@ -183,4 +183,4 @@ var napEvent = function() {
 partyTimeButton.addEventListener('click', partyEvent);
 napTimeSelector.addEventListener('change', napEvent);
 lunchTimeSelector.addEventListener('change', lunchEvent);
-wakeupTimeSelector.addEventListener('change', wakeUpEvent);
+wakeupTimeSelector.addEventListener('change', wakeupEvent);
