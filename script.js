@@ -11,47 +11,12 @@ var timeEvent = document.getElementById ("timeEvent");
 var message = document.getElementById ("timeEvent");
 var lolcat = document.getElementById('lolcat');
 var image = "https://cattreeuk-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/Cat-Waking-Me-Up.jpg";
-var image = "http://petslady.com/sites/default/files/inline-images/a%20frees%207.jpg";
-var image = "http://sleepboston.com/wp-content/uploads/2018/03/Cat-Sleeping-in-Keyboard-300x200.jpg";
-var image = "https://i.pinimg.com/originals/89/9e/71/899e7132fd5125067051104e5e3e3073.jpg";	
-var image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.jpg";   
-var image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg";
-var image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg";    
 var partyTimeButton = document.getElementById("partyTimeButton");
 var wakeupTimeSelector =  document.getElementById("wakeupTimeSelector");
 var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 var napTimeSelector = document.getElementById("napTimeSelector");
 
 			   
-										   
-if (time == partyTime){
-	image = "https://i.pinimg.com/originals/89/9e/71/899e7132fd5125067051104e5e3e3073.jpg";	
-    messageText = "IZ PARTEE TIME!!";
-} else if (time == napTime) {
-    image = "http://sleepboston.com/wp-content/uploads/2018/03/Cat-Sleeping-in-Keyboard-300x200.jpg";
-    messageText = "IZ NAP TIME…";
-} else if (time == lunchTime) {
-	image = "http://petslady.com/sites/default/files/inline-images/a%20frees%207.jpg";
-    messageText = "IZ NOM NOM NOM TIME!!";
-} else if (time == wakeupTime) {
-	image = "https://cattreeuk-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/Cat-Waking-Me-Up.jpg";
-    messageText = "IZ TIME TO GETTUP.";
-} else if (time < noon) {
-	image = "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_960_720.jpg"; 
-    messageText = "Good morning!";
-} else if (time > evening) {
-	image = "https://cdn.pixabay.com/photo/2018/01/19/15/29/cat-3092650_960_720.jpg"; 
-    messageText = "Good Evening!";
-} else {
-	image = "https://cdn.pixabay.com/photo/2014/09/13/05/06/cat-443604_960_720.jpg"; 
-    messageText = "Good afternoon!";
-}
-
-timeEvent.innerText = messageText;
-lolcat.src = image;
-
-
-
 var showCurrentTime = function()
 {
     // display the string on the webpage
@@ -92,15 +57,6 @@ var showCurrentTime = function()
     clock.innerText = clockTime;
 };
 
-var noon = 12;
-var evening = 18; // 6PM
- 
-var wakeupTime = 9; // 9AM
-var lunchTime = 12; // 12PM
-var partyTime = 17; // 5PM
-var napTime = lunchTime + 2; // 2PM
-var time = new Date().getHours();
-
 var updateClock = function ()
 {
 	
@@ -127,7 +83,10 @@ var updateClock = function ()
     	messageText = "Good Afternoon!";
 }
 	
-showCurrentTime();
+   lolcat.src = image;
+   message.innerText = messageText;
+	
+   showCurrentTime();
 
 }
  
